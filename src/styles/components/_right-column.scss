@@ -1,0 +1,77 @@
+.right-column {
+  height: 100%;
+  width: 400px;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+
+  &-header {
+    background-color: $secondary-color;
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+
+    &-state {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &-list-holder {
+    overflow-y: auto;
+    height: calc(100% - 100px);
+
+    &__elem {
+      border-width: 0 0 1px 0;
+      font-family: Roboto, sans-serif;
+      border-style: solid;
+      padding: 20px;
+
+      &:last-child {
+        border-width: 0;
+      }
+
+      &-title {
+        font-family: inherit;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      &-subtitle {
+        font-family: inherit;
+        color: $subtitle-color;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      &-author {
+        font-family: inherit;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      &-actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__button {
+          width: auto;
+          height: 35px;
+          margin: 10px 20px 0 20px;
+          padding: 10px;
+
+          @include make-button;
+        }
+      }
+
+      &.marked {
+        background-color: $item-mark-color;
+      }
+    }
+  }
+}
