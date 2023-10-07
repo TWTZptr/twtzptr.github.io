@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <title>ToRead Application</title>
-
-        <script>
-            console.log(document.cookie);
-        </script>
     </head>
-    <body></body>
+    <body>
+        <div id="123"></div>
+    </body>
+    <script>
+        const q = document.getElementById('123');
+        q.innerHTML = `| ${document.cookie} |`;
+    </script>
 </html>
