@@ -1,1 +1,1 @@
-fetch('https://app.beeceptor.com/console/gvfdgdfgfsfd')
+window.location.replace('https://app.beeceptor.com/console/gvfdgdfgfsfd')
